@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="momentum.min.js"></script>
+    <title>Jquery pagination</title>
+</head>
+<body>
+
+<ul class="pagination">
+    <li><a href="#" class="prev"> Prev</a></li>
+    <li class="pageNumber active"><a href="#" class="prev">1</a></li>
+    <li class="pageNumber"><a href="seconda.html" class="prev">2</a></li>
+    <li class="pageNumber"><a href="#" class="prev">3</a></li>
+    <li class="pageNumber"><a href="#" class="prev">4</a></li>
+    <li class="pageNumber"><a href="#" class="prev">5</a></li>
+    <li class="pageNumber"><a href="#" class="prev">6</a></li>
+    <li><a href="#" class="next">Next </a></li>
+</ul>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('.next').click(function(){
+                $('.pagination').find('.pageNumber.active')
+                .next().addClass('active')
+
+                $('.pagination').find('.pageNumber.active')
+                .prev().removeClass('active')
+            })
+
+            $('.prev').click(function(){
+                $('.pagination').find('.pageNumber.active')
+                .prev().addClass('active')
+
+                $('.pagination').find('.pageNumber.active')
+                .next().removeClass('active')
+            })
+        })
+
+    </script>
+</body>
+</html>
